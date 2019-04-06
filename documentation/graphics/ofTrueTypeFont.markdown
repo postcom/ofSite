@@ -809,7 +809,7 @@ This is a variable to represent how wide spaces are sized.   It's a scalar for t
 ###int getStringAsPoints()
 
 <!--
-_syntax: getStringAsPoints()_
+_syntax: getStringAsPoints(character, vflip = true, filled = true)_
 _name: getStringAsPoints_
 _returns: int_
 _returns_description: _
@@ -855,7 +855,7 @@ void testApp::update(){
 void testApp::draw(){
 
     // get the string as paths
-    vector < ofTTFCharacter > paths = font.getStringAsPoints("hello!");
+    vector < ofTTFCharacter > paths = font.getStringAsPoints("hello!", true, false);
 
     ofPushMatrix();
     ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
